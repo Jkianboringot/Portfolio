@@ -881,7 +881,7 @@ h3 {
 
 .contact-label {
   position: absolute;
-  top: 0.4rem;
+  top: .40rem;
   width: 100%;
   font-size: var(--small-font-size);
   transition: 0.3s;
@@ -900,4 +900,13 @@ h3 {
   left: 0;
   z-index: 10;
   columns: var(--color-primary);
+}
+
+
+.footer{
+  padding: 60px 0;
+}
+
+.footer-text{
+  text-align: center;
 }
