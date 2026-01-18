@@ -7,7 +7,13 @@
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 
 /*=============== TESTIMONIAL SWIPER ===============*/
-
+var swiper=new Swiper(".testimonail-wrapper",{
+    loop:'true',
+    pagination:{
+        el:'.swiper-pagination',
+        clickable:'true'
+    }
+})
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 /*=============== PORTFOLIO ITEM FILTER ===============*/
