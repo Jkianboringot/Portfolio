@@ -1,6 +1,6 @@
 // loader.js
 function loadSection(sectionId) {
-  fetch(`pages/${sectionId}.html`)
+  fetch(`assets/pages/${sectionId}.html`)
     .then(res => {
       if (!res.ok) throw new Error("Page not found");
       return res.text();
@@ -15,4 +15,4 @@ function loadSection(sectionId) {
 }
 
 // Load all sections dynamically
-["about", "experience", "pricing", "projects", "contact",'home','testimonial','services','blog'].forEach(loadSection);
+["about", "experience", "pricing", "projects", "contact",'home','testimonail','services','blog'].forEach(loadSection);
