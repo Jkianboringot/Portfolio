@@ -509,7 +509,6 @@ h3 {
 .prices {
   flex: 0 0 33.33%;
   max-width: 33.33%;
-  display: flex;
 }
 .prices:nth-child(odd) {
   margin-top: 1.5rem;
@@ -952,7 +951,6 @@ h3 {
   display: grid;
   place-items: center;
   font-size: var(--small-font-size);
-  display: none;
 }
 
 .customize-theme .card {
@@ -1132,7 +1130,10 @@ h3 {
 
 @media screen and (max-width:768px) {
   body{
-    margin: var(--header-height);
+    margin: var(--header-height) 0 0 0;
+  }
+  .container{
+    max-width: 568px;
   }
   .nav{
     height: var(--header-height);
@@ -1160,10 +1161,60 @@ h3 {
   .nav-toggle{
     display: inline-flex;
   }
+  .contact-data,
+  .contact-form,
+  .prices ,
+  .education,
+  .services .service-item,
+  .experience,
+  .about-content .about-text,
+  .about-content .skills{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .fact-item,
+  .blog-item,
+  .project-item{
+    flex-direction: 0 0 50%;
+    max-width: 50%;
+  }
+  .about-content .about-text{
+    margin-bottom: var(--m-1-5);
+  }
+  .contact-data,
+  .blog-item,
+  .education{
+    margin-bottom: var(--m-2-5);
+  }
 }
 
+@media screen and (max-width:576px){
+  .blog-item,
+  .project-item{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blog-item .inner,
+  .project-item-inner{
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .timeline{
+    padding: 25px 20px;
+  }
+  .timeline .timeline-item{
+    padding-left: 35px;
+    padding-bottom: 20px;
+  }
+}
 
-
+@media screen and (max-width:320px)
+{
+  .fact-item{
+    flex:  0 0 100%;
+    max-width: 100%;
+  }
+}
 
 
 
