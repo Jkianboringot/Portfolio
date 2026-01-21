@@ -951,6 +951,7 @@ h3 {
   display: grid;
   place-items: center;
   font-size: var(--small-font-size);
+  display: none;
 }
 
 .customize-theme .card {
@@ -1090,7 +1091,11 @@ h3 {
   border-radius: 50%;
 }
 
-
+@media screen and (max-width:1200px) {
+  .customize-theme .card{
+    width: 50vw;
+  }
+}
 
 @media screen and (max-width:968px) {
 .about-content,
@@ -1124,6 +1129,9 @@ h3 {
 }
 .prices:nth-child(3){
   padding-left: 15px;
+}
+.customize-theme .card{
+  width: 58vw;
 }
 }
 
@@ -1186,6 +1194,9 @@ h3 {
   .education{
     margin-bottom: var(--m-2-5);
   }
+  .customize-theme .card{
+  width: 75vw;
+}
 }
 
 @media screen and (max-width:576px){
@@ -1206,6 +1217,10 @@ h3 {
     padding-left: 35px;
     padding-bottom: 20px;
   }
+  .customize-theme .card{
+  width: 96vw;
+  padding: 1rem;
+}
 }
 
 @media screen and (max-width:320px)
