@@ -1156,7 +1156,7 @@ h3 {
     width: 80%;
     height: 100%;
     top: 0;
-    right: 100%;
+    right: -100%;
     padding: 4rem 0 0 3rem;
     border-radius: 1rem 0 0 1rem;
     z-index: 100;
