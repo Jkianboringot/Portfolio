@@ -608,6 +608,7 @@ h3 {
   margin: 0 var(--m-0-75);
   cursor: pointer;
   white-space: nowrap;
+  color: var(--color-dark);
   transition: 0.3s;
 }
 
@@ -631,6 +632,27 @@ h3 {
   flex: 0 0 33.33%;
   max-width: 33.33%;
   margin-bottom: var(--m-1-5);
+}
+
+.project-item.hide{
+  display: none;
+}
+
+
+.project-item.show{
+  display: block;
+  animation: showItem 0.5s ease;
+}
+
+@keyframes showIt{
+  0%{
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .project-item-inner {
@@ -1079,17 +1101,12 @@ h3 {
 }
 
 .customize-theme .choose-bg > div.active {
-  border: 2px solid --color-primary;
+  border: 2px solid var(--color-primary);
 }
 
 .customize-theme .choose-bg .bg-1 {
-  background: var(--color-light);
-  color: var(--color-dark);
-}
-
-.customize-theme .choose-bg .bg-1 {
-  background: var(--color-light);
-  color: var(--color-dark);
+  background: hsl(252, 30%, 92%);
+  color:hsl(252,30%, 17%);
 }
 
 .customize-theme .choose-bg .bg-2 {
