@@ -55,7 +55,8 @@ var swiper = new Swiper(".testimonail-wrapper", {
 const theme = document.querySelector("#theme-button");
 const themeModal = document.querySelector(".customize-theme");
 const fontSizes = document.querySelectorAll(".choose-size span");
-const colorPalette=document.querySelectorAll('.choose-color span')
+const colorPalette=document.querySelectorAll('.choose-color span');
+var root= document.querySelector(':root')
 
 const openThemeModal = () => {
   themeModal.classList.add("show");
@@ -107,5 +108,39 @@ fontSizes.forEach((size) => {
 /*===== PRIMARY COLORS =====*/
 
 
+const removeColorSelector=()=>{
+  colorPalette.forEach(color=>{
+    color.classList.remove('active')
+  })
+}
+
+colorPalette.forEach(color => {
+  color.addEventListener("click", () => {
+
+    removeSizeSelector();
+
+    let color;
+
+
+    color.classList.toggle('active'); //toggles the 'active' class on the clicked element
+
+
+    if (color.classList.contains("color-1")) {
+      color = "12px";
+    } else if (color.classList.contains("color-2")) {
+      color = "14px";
+    } else if (color.classList.contains("color-3")) {
+      color = "16px";
+    } else if (color.classList.contains("size-4")) {
+      color = "18px";
+    }
+    else if (color.classList.contains("size-5")) {
+      color = "18px";
+    }
+
+    document.querySelector("html").style.color = color;
+
+  });
+});
 
 /*===== THEME BACKGROUNDS =====*/
