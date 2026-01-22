@@ -54,9 +54,17 @@ var swiper = new Swiper(".testimonail-wrapper", {
 
 const theme = document.querySelector("#theme-button");
 const themeModal = document.querySelector(".customize-theme");
+
 const fontSizes = document.querySelectorAll(".choose-size span");
+
 const colorPalette=document.querySelectorAll('.choose-color span');
 var root= document.querySelector(':root');
+
+const Bg1=document.querySelector('.bg-1');
+const Bg2=document.querySelector('.bg-2');
+const Bg3=document.querySelector('.bg-3');
+
+
 
 const openThemeModal = () => {
   themeModal.classList.add("show");
@@ -142,3 +150,20 @@ colorPalette.forEach(color => {
 });
 
 /*===== THEME BACKGROUNDS =====*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
