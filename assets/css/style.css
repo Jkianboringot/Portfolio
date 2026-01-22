@@ -52,6 +52,11 @@ else stick with old root , one on the top */
   padding: 0;
   box-sizing: border-box;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 body,
 button,
 input,
