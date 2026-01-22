@@ -30,13 +30,13 @@ navLinks.forEach((n) => n.addEventListener("click", linkAction));
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 
-function scrollHeader(){
-  const header =document.getElementById('header')
+function scrollHeader() {
+  const header = document.getElementById("header");
 
-if(this.scrollY>=69) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
-
+  if (this.scrollY >= 80) header.classList.add("scroll-header");
+  else header.classList.remove("scroll-header");
 }
-window.addEventListener('scroll',scrollHeader)
+window.addEventListener("scroll", scrollHeader);
 
 /*=============== TESTIMONIAL SWIPER ===============*/
 var swiper = new Swiper(".testimonail-wrapper", {
@@ -52,6 +52,19 @@ var swiper = new Swiper(".testimonail-wrapper", {
 
 /*=============== THEME/DISPLAY CUSTOMIZATION ===============*/
 
+const theme = document.querySelector("#theme-button");
+const themeModal = document.querySelector(".customize-theme");
+
+const openThemeModal = () => {
+  themeModal.classList.add("show");
+}
+const closeThemeModal=(e)=>{
+  if(e.target.classList.contains('customize-theme')){
+    themeModal.classList.remove('show')
+  }
+}
+theme.addEventListener("click", openThemeModal);
+themeModal.addEventListener("click", closeThemeModal);
 /*===== FONTS =====*/
 
 /*===== PRIMARY COLORS =====*/

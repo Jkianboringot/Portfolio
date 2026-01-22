@@ -256,6 +256,10 @@ h3 {
   border-radius: 50%;
 }
 
+.scroll-header{
+  box-shadow: 0 1px 4px rgba(165,125,125,0.02);
+}
+
 .home {
   display: flex;
   justify-content: center;
@@ -953,10 +957,13 @@ h3 {
   left: 0;
   z-index: 100;
   text-align: center;
-  display: grid;
   place-items: center;
   font-size: var(--small-font-size);
   display: none;
+}
+
+.customize-theme.show{
+  display: grid;
 }
 
 .customize-theme .card {
