@@ -56,7 +56,7 @@ const theme = document.querySelector("#theme-button");
 const themeModal = document.querySelector(".customize-theme");
 const fontSizes = document.querySelectorAll(".choose-size span");
 const colorPalette=document.querySelectorAll('.choose-color span');
-var root= document.querySelector(':root')
+var root= document.querySelector(':root');
 
 const openThemeModal = () => {
   themeModal.classList.add("show");
@@ -117,29 +117,27 @@ const removeColorSelector=()=>{
 colorPalette.forEach(color => {
   color.addEventListener("click", () => {
 
-    removeSizeSelector();
+    removeColorSelector();
 
-    let color;
+    let colorhue;
 
 
     color.classList.toggle('active'); //toggles the 'active' class on the clicked element
 
-
     if (color.classList.contains("color-1")) {
-      color = "12px";
+      colorhue = "252";
     } else if (color.classList.contains("color-2")) {
-      color = "14px";
+      colorhue = "52";
     } else if (color.classList.contains("color-3")) {
-      color = "16px";
-    } else if (color.classList.contains("size-4")) {
-      color = "18px";
+      colorhue = "352";
+    } else if (color.classList.contains("color-4")) {
+      colorhue = "152";
     }
-    else if (color.classList.contains("size-5")) {
-      color = "18px";
+    else if (color.classList.contains("color-5")) {
+      colorhue = "202";
     }
 
-    document.querySelector("html").style.color = color;
-
+    root.style.setProperty('--primary-color-hue',colorhue);
   });
 });
 
