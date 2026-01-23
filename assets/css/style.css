@@ -1277,7 +1277,9 @@ h3 {
   }
 }
 
-
+.resume-button:not(:first-child){
+  padding-left: 10px;
+}
 
 
 
