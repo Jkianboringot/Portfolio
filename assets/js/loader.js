@@ -15,4 +15,4 @@ function loadSection(sectionId) {
 }
 
 // Load all sections dynamically
-["about", "experience", "pricing", "projects", "contact",'home','testimonail','services','blog'].forEach(loadSection);
+["about", "experience",  "projects", "contact",'home'].forEach(loadSection);
