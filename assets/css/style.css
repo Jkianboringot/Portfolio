@@ -1221,6 +1221,7 @@ h3 {
   .education,
   .services .service-item,
   .experience,
+  .git,
   .about-content .about-text,
   .about-content .skills{
     flex: 0 0 100%;
@@ -1283,7 +1284,16 @@ h3 {
 
 
 
+.git {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
 
+.git-img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 
 
