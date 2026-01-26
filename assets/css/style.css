@@ -370,8 +370,9 @@ h3 {
   flex: 0 0 75%;
   max-width: 75%;
 }
-.about-content .about-text,
-.skills {
+.about-content .about-text
+/* .skills  */
+{
   flex: 0 0 50%;
   max-width: 50%;
 }
