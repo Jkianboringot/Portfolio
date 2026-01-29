@@ -1291,15 +1291,15 @@ h3 {
 }
 
 .brand-section {
+  display: flex;
   width: 100%;
   background-color: #f11313;
 }
 
 .brand-track {
   display: flex;       /* makes items inline in a row */
-  flex-wrap: nowrap;   /* prevent wrapping to next line */
   width: max-content;  /* track width only as wide as images */
-  animation: scroll 20s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .brand-track img,
@@ -1307,6 +1307,7 @@ h3 {
   height: 48px;       /* fixed height */
   width: auto;        /* scale proportionally */
   margin: 0 10px;
+vertical-align: middle;
   object-fit: contain;
   opacity: 0.8;
   transition: 0.3s;
