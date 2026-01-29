@@ -3,10 +3,10 @@
 :root {
   --header-height: 3.5rem;
 
-  --primary-color-hue:352;
-  --dark-color-lightness:17%;
-  --light-color-lightness:92%;
-  --white-color-lightness:100%;
+  --primary-color-hue: 352;
+  --dark-color-lightness: 17%;
+  --light-color-lightness: 92%;
+  --white-color-lightness: 100%;
   /* --gray-color-lightness:65% */
 
   --color-white: hsl(252, 30%, var(--white-color-lightness));
@@ -39,28 +39,26 @@
   --box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0.6rem;
   background: var(--color-white);
 }
 
-::-webkit-scrollbar{
- 
+::-webkit-scrollbar {
   background: var(--color-primary);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
-
 
 /* this is what allow the portfolio to be resposive to any size, phone or pc
 its pretty much a an if statement, saying if screen is smaller than 992px apply the root(default style)
 else stick with old root , one on the top */
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
   :root {
     --h1-font-size: 1.75rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
   }
 }
 
@@ -70,7 +68,7 @@ else stick with old root , one on the top */
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -132,7 +130,7 @@ h3 {
 }
 
 .section .container {
-  padding-top: 3.90rem;
+  padding-top: 3.9rem;
   padding-bottom: 4.75rem;
 }
 
@@ -230,8 +228,7 @@ h3 {
   color: var(--color-primary);
 }
 
-
-.nav-close{
+.nav-close {
   font-size: 1rem;
   position: absolute;
   top: 1rem;
@@ -273,8 +270,8 @@ h3 {
   border-radius: 50%;
 }
 
-.scroll-header{
-  box-shadow: 0 1px 4px rgba(165,125,125,0.02);
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(165, 125, 125, 0.02);
 }
 
 .home {
@@ -371,10 +368,9 @@ h3 {
   max-width: 75%;
 }
 .about-content .about-text
-/* .skills  */
-{
-  flex: 0 0 50%;
-  max-width: 50%;
+/* .skills  */ {
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .rouded {
@@ -471,7 +467,6 @@ h3 {
 .text a {
   color: var(--color-primary);
 }
-
 
 .experience {
   flex: 0 0 100%;
@@ -646,22 +641,21 @@ h3 {
   margin-bottom: var(--m-1-5);
 }
 
-.project-item.hide{
+.project-item.hide {
   display: none;
 }
 
-
-.project-item.show{
+.project-item.show {
   display: block;
   animation: showItem 0.5s ease;
 }
 
-@keyframes showIt{
-  0%{
+@keyframes showIt {
+  0% {
     transform: scale(0.6);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -1002,7 +996,7 @@ h3 {
   display: none;
 }
 
-.customize-theme.show{
+.customize-theme.show {
   display: grid;
 }
 
@@ -1118,7 +1112,7 @@ h3 {
 
 .customize-theme .choose-bg .bg-1 {
   background: hsl(252, 30%, 92%);
-  color:hsl(252,30%, 17%);
+  color: hsl(252, 30%, 17%);
 }
 
 .customize-theme .choose-bg .bg-2 {
@@ -1138,66 +1132,64 @@ h3 {
   border-radius: 50%;
 }
 
-@media screen and (max-width:1200px) {
-  .customize-theme .card{
+@media screen and (max-width: 1200px) {
+  .customize-theme .card {
     width: 50vw;
   }
 }
 
-@media screen and (max-width:968px) {
-.about-content,
-.about-img{
-  flex: 0 0 100%;
-  max-width: 100%;
+@media screen and (max-width: 968px) {
+  .about-content,
+  .about-img {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about-img {
+    text-align: center;
+    margin-bottom: var(--m-2-5);
+  }
+  .prices,
+  .services .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: var(--m-2-5);
+  }
+  .price-item.best {
+    padding: var(--card-padding);
+  }
+  .prices:nth-child(odd) {
+    margin-top: 0;
+  }
+  .prices:nth-child(1) {
+    padding-right: 15px;
+  }
+  .prices:nth-child(2) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .prices:nth-child(3) {
+    padding-left: 15px;
+  }
+  .customize-theme .card {
+    width: 58vw;
+  }
 }
-.about-img{
-  text-align: center;
-  margin-bottom: var(--m-2-5);
-}
-.prices,
-.services .service-item{
-  flex: 0 0 50%;
-  max-width: 50%;
-  margin-bottom: var(--m-2-5);
-}
-.price-item.best{
-  padding: var(--card-padding);
-}
-.prices:nth-child(odd){
-  margin-top: 0;
 
-}
-.prices:nth-child(1){
-  padding-right: 15px;
-}
-.prices:nth-child(2){
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.prices:nth-child(3){
-  padding-left: 15px;
-}
-.customize-theme .card{
-  width: 58vw;
-}
-}
-
-
-@media screen and (max-width:768px) {
-  body{
+@media screen and (max-width: 768px) {
+  body {
     margin: var(--header-height) 0 0 0;
   }
-  .container{
+  .container {
     max-width: 568px;
   }
-  .nav{
+  .nav {
     height: var(--header-height);
   }
-  .nav-list{
+  .nav-list {
     flex-direction: column;
     row-gap: 1.5rem;
   }
-  .nav-menu{
+  .nav-menu {
     position: fixed;
     background: var(--color-white);
     width: 80%;
@@ -1207,94 +1199,101 @@ h3 {
     padding: 4rem 0 0 3rem;
     border-radius: 1rem 0 0 1rem;
     z-index: 100;
-    transition: .3s;
+    transition: 0.3s;
   }
-  .show-menu{
+  .show-menu {
     right: 0;
   }
   .nav-close,
-  .nav-toggle{
+  .nav-toggle {
     display: inline-flex;
   }
   .contact-data,
   .contact-form,
-  .prices ,
+  .prices,
   .education,
   .services .service-item,
   .experience,
   .git,
-  .about-content .about-text{
+  .about-content .about-text {
     flex: 0 0 100%;
     max-width: 100%;
   }
   .fact-item,
   .blog-item,
-  .project-item{
+  .project-item {
     flex-direction: 0 0 50%;
     max-width: 50%;
   }
-  .about-content .about-text{
+  .about-content .about-text {
     margin-bottom: var(--m-1-5);
   }
   .contact-data,
   .blog-item,
-  .education{
+  .education {
     margin-bottom: var(--m-2-5);
   }
-  .customize-theme .card{
-  width: 75vw;
-}
+  .customize-theme .card {
+    width: 75vw;
+  }
 }
 
-@media screen and (max-width:576px){
+@media screen and (max-width: 576px) {
   .blog-item,
-  .project-item{
+  .project-item {
     flex: 0 0 100%;
     max-width: 100%;
   }
   .blog-item .inner,
-  .project-item-inner{
+  .project-item-inner {
     max-width: 380px;
     margin: 0 auto;
   }
-  .timeline{
+  .timeline {
     padding: 25px 20px;
   }
-  .timeline .timeline-item{
+  .timeline .timeline-item {
     padding-left: 35px;
     padding-bottom: 20px;
   }
-  .customize-theme .card{
-  width: 96vw;
-  padding: 1rem;
-}
+  .customize-theme .card {
+    width: 96vw;
+    padding: 1rem;
+  }
 }
 
-@media screen and (max-width:320px)
-{
-  .fact-item{
-    flex:  0 0 100%;
+@media screen and (max-width: 320px) {
+  .fact-item {
+    flex: 0 0 100%;
     max-width: 100%;
   }
 }
 
-.resume-button:not(:first-child){
+.resume-button:not(:first-child) {
   padding-left: 10px;
 }
-
-
 
 .git {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
-.git-img{
+.git-img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
+.brand-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* space between icons */
+  justify-content: center;
+  align-items: center;
+}
 
-
-
+.brand-group img,
+.brand-group svg {
+  height: 48px; /* fixed height for all icons */
+  width: auto; /* width scales proportionally */
+}
