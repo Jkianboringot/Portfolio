@@ -1284,16 +1284,41 @@ h3 {
   object-fit: cover;
 }
 
-.brand-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px; /* space between icons */
-  justify-content: center;
-  align-items: center;
+.brand{
+  flex: 0 0 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-.brand-group img,
-.brand-group svg {
-  height: 48px; /* fixed height for all icons */
-  width: auto; /* width scales proportionally */
+.brand-section {
+  width: 100%;
+  background-color: #f11313;
+}
+
+.brand-track {
+  display: flex;       /* makes items inline in a row */
+  flex-wrap: nowrap;   /* prevent wrapping to next line */
+  width: max-content;  /* track width only as wide as images */
+  animation: scroll 20s linear infinite;
+}
+
+.brand-track img,
+.brand-track svg {
+  height: 48px;       /* fixed height */
+  width: auto;        /* scale proportionally */
+  margin: 0 10px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.brand-track img:hover,
+.brand-track svg:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* for duplicated images */
 }
