@@ -1290,11 +1290,6 @@ h3 {
   overflow: hidden;
 }
 
-.brand-section {
-  display: flex;
-  width: 100%;
-  background-color: #f11313;
-}
 
 .brand-track {
   display: flex;       /* makes items inline in a row */
@@ -1322,4 +1317,9 @@ vertical-align: middle;
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } /* for duplicated images */
+}
+
+
+.brand .brand-track:hover{
+  animation-play-state: paused;
 }
