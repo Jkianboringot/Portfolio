@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BugVilla Project</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 900px;
+  }
+
+  .card {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .card h2 {
+    margin-top: 0;
+  }
+
+  .card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .buttons a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .case-study {
+    background-color: #5a67f2;
+    color: white;
+  }
+
+  .case-study:hover {
+    background-color: #434bb5;
+  }
+
+  .live-demo {
+    background-color: #4c9f70;
+    color: white;
+  }
+
+  .live-demo:hover {
+    background-color: #367953;
+  }
+
+  .github {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  iframe {
+    border-radius: 12px;
+    width: 500px;
+    height: 280px;
+    border: none;
+  }
+
+  .tech-icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .tech-icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media(max-width: 900px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h2>BugVilla</h2>
+    <p>Universal bug tracker for everyone! BugVilla allows team members to collaborate, discuss and kill bugs effectively.</p>
+    <div class="buttons">
+      <a href="#" class="case-study">Case Study</a>
+      <a href="#" class="live-demo">Live Demo</a>
+      <a href="#" class="github">GitHub</a>
+    </div>
+    <div class="tech-icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+    </div>
+  </div>
+
+  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="BugVilla Video"></iframe>
+</div>
+
+</body>
+</html>
