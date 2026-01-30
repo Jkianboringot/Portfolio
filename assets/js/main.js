@@ -10,21 +10,37 @@ if (navToggle) {
   });
 }
 
-
 /*=============== Light/Dark Mode ===============*/
 
 const slider = document.getElementById("slider");
 const slideInput = document.getElementById("slider-input");
+var root = document.querySelector(":root");
+
+let lightColorLightness;
+let whiteColorLightness;
+let darkColorLightness;
+
+const changeBG = () => {
+  root.style.setProperty("--light-color-lightness", lightColorLightness);
+  root.style.setProperty("--white-color-lightness", whiteColorLightness);
+  root.style.setProperty("--dark-color-lightness", darkColorLightness);
+};
 
 slideInput.addEventListener("change", () => {
-  // Add 'active' if checked, remove if unchecked
+  darkColorLightness = "95%";
+  whiteColorLightness = "20%";
+  lightColorLightness = "15%";
+
   slider.classList.toggle("active", slideInput.checked);
+
+  if (!slideInput.checked) {
+    darkColorLightness = "";
+    whiteColorLightness = "";
+    lightColorLightness = "";
+  }
+
+  changeBG();
 });
-
-
-
-
-
 
 /*============== MENU HIDDEN ===============*/
 if (navClose) {
@@ -203,6 +219,11 @@ function navHighlighter() {
 // });
 
 // /*===== THEME BACKGROUNDS =====*/
+
+// const Bg1 = document.querySelector(".bg-1");
+// const Bg2 = document.querySelector(".bg-2");
+// const Bg3 = document.querySelector(".bg-3");
+
 // let lightColorLightness;
 // let whiteColorLightness;
 // let darkColorLightness;
@@ -245,5 +266,3 @@ function navHighlighter() {
 //   Bg1.classList.remove("active");
 //   changeBG();
 // });
-
-
