@@ -1333,8 +1333,8 @@ vertical-align: middle;
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 26px;
+  width: 40px;
+  height: 20px;
 }
 
 .switch input {
@@ -1354,9 +1354,8 @@ vertical-align: middle;
 .slider::before {
   content: "";
   position: absolute;
-  height: 20px;
-  width: 20px;
-  left: 3px;
+  height: 15px;
+  width: 15px;
   bottom: 3px;
   background: white;
   border-radius: 50%;
@@ -1364,7 +1363,7 @@ vertical-align: middle;
 }
 
 input:checked + .slider {
-  background: #4caf50;
+  background:var(--color-primary);
 }
 
 input:checked + .slider::before {
