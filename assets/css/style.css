@@ -805,6 +805,7 @@ h3 {
   border-radius: var(--border-radius);
   transform: translateY(0);
   transition: 0.3s;
+  margin-top: 20px;
 }
 
 .blog-item .inner:hover {
