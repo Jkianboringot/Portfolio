@@ -1291,6 +1291,7 @@ h3 {
 }
 
 .git {
+  padding-top: 5%;
   flex: 0 0 100%;
   max-width: 100%;
   
