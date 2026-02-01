@@ -137,7 +137,8 @@ h3 {
 .section-title {
   font-size: var(--h1-font-size);
   margin-left: var(--m-0-75);
-  margin-bottom: var(--m-2-5);
+  margin-bottom: 1rem;
+  /* margin-bottom: var(--m-2-5); */
 }
 
 .padd-15 {
@@ -806,6 +807,13 @@ h3 {
   flex: 0 0 33.33%;
   max-width: 33.33%;
   display: flex;
+}
+
+.blog-title{
+  font-size: var(--h1-font-size);
+  margin-left: var(--m-0-75);
+  margin-top: 1rem;
+
 }
 
 .blog-item .inner {
