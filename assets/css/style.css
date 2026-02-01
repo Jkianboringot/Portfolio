@@ -361,11 +361,14 @@ h3 {
 .about-img {
   flex: 0 0 25%;
   max-width: 25%;
+  
+  
 }
 
 .about-content {
   flex: 0 0 75%;
   max-width: 75%;
+  
 }
 .about-content .about-text
 /* .skills  */ {
@@ -377,6 +380,8 @@ h3 {
   background-color: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--border-radius);
+  box-shadow:0 4px 8px rgba(0,0,0,0.3) ;
+
 }
 
 .about-text p {
@@ -471,11 +476,13 @@ h3 {
 .experience {
   flex: 0 0 100%;
   max-width: 100%;
+  
 }
 
 .timeline-box {
   flex: 0 0 100%;
   max-width: 100%;
+  
 }
 
 .timeline {
@@ -483,6 +490,8 @@ h3 {
   padding: 1.9rem 0.95rem;
   border-radius: var(--border-radius);
   width: 100%;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3) ;
+
   position: relative;
 }
 
@@ -802,6 +811,8 @@ h3 {
 .blog-item .inner {
   background: var(--color-white);
   overflow: hidden;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3) ;
+
   border-radius: var(--border-radius);
   transform: translateY(0);
   transition: 0.3s;
@@ -818,6 +829,7 @@ h3 {
 }
 
 .blog-item .thumb img {
+  height: 180px ;
   transform: scale(1);
   transition: 0.3s;
 }
@@ -1281,12 +1293,14 @@ h3 {
 .git {
   flex: 0 0 100%;
   max-width: 100%;
+  
 }
 
 .git-img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  
 }
 
 .brand{
@@ -1300,6 +1314,7 @@ h3 {
   display: flex;       /* makes items inline in a row */
   width: max-content;  /* track width only as wide as images */
   animation: scroll 30s linear infinite;
+  
 }
 
 .brand-track img,
@@ -1311,6 +1326,7 @@ vertical-align: middle;
   object-fit: contain;
   opacity: 0.8;
   transition: 0.3s;
+  
 }
 
 .brand-track img:hover,
