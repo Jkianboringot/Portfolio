@@ -327,6 +327,7 @@ using for each and odd*/
   text-align: center;
   flex-wrap: wrap;
   overflow: hidden;
+  margin-bottom: 5rem;
 }
 
 .intro .intro-img {
@@ -343,7 +344,7 @@ using for each and odd*/
 }
 
 .intro .intro-headline {
-  margin-top: 8rem;
+  margin-top: 9rem;
   height: 25rem;
   flex: 0 0 50%;
   max-width: 50%;
@@ -924,8 +925,9 @@ using for each and odd*/
   flex: 0 0 100%;
   max-width: 100%;
   overflow: hidden;
-  background-color: whitesmoke;
-  border: 2px solid var(--decor-color);
+  background-color: rgba(255, 255, 255, 0.932);
+  border-radius: 0.5rem;
+
 }
 
 .brand-track {
@@ -941,8 +943,8 @@ using for each and odd*/
   margin: 0 10px;
   vertical-align: middle;
   object-fit: contain;
-  opacity: 0.8;
   transition: 0.3s;
+  /* border: 3px solid red; */
 }
 
 .brand-track img:hover,
