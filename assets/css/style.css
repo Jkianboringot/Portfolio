@@ -902,8 +902,7 @@ using for each and odd*/
 }
 
 .resume-button {
-  background-color: var(--decor-color);
-  border: 2px solid white;
+  border-radius: 0.5rem;
   margin-left: 1rem;
 
   text-align: center;
