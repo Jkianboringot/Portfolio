@@ -333,6 +333,8 @@ using for each and odd*/
   margin-top: 3rem;
   flex: 0 0 50%;
   max-width: 50%;
+  height: 35rem;
+  overflow: hidden;
 }
 
 .intro-img .img-body img {
@@ -922,6 +924,8 @@ using for each and odd*/
   flex: 0 0 100%;
   max-width: 100%;
   overflow: hidden;
+  background-color: whitesmoke;
+  border: 2px solid var(--decor-color);
 }
 
 .brand-track {
