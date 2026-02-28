@@ -6,7 +6,8 @@
   --secondary-bg:#020019;
   --decor-color:#FDBF05;
   --color-white:#ffff;
-  
+  --border-bg:#0D0566;
+  /* --decor-color:#FDBF05; */
 
 
 
@@ -24,7 +25,7 @@
   --color-white: hsl(252, 30%, var(--white-color-lightness));
   --color-light: hsl(252, 30%, var(--light-color-lightness));
   --color-gray: hsl(252, 15%, 65%);
-  --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
+  --decor-color: hsl(var(--primary-color-hue), 75%, 60%);
   --color-dark: hsl(252, 30%, var(--dark-color-lightness)); */
 
   --body-font: "Rubik", sans-serif;
@@ -214,7 +215,7 @@ using for each and odd*/
   color: #fff;
   vertical-align: middle;
   display: inline-block;
-  background-color: var(--color-primary);
+  background-color: var(--decor-color);
   transform: perspective(1px) translateZ(0);
 }
 
@@ -227,7 +228,7 @@ using for each and odd*/
 
 .header {
   width: 100%;
-  background-color: var(--color-light);
+  background-color: #02001998;
   position: fixed;
   top: 0;
   left: 0;
@@ -254,7 +255,7 @@ using for each and odd*/
   width: 0.3rem;
   height: 0.3rem;
   border-radius: 50%;
-  background-color: var(--color-primary);
+  background-color: var(--decor-color);
   top: 56%;
   right: -0.25rem;
 }
@@ -271,7 +272,7 @@ using for each and odd*/
 }
 
 .nav-link:hover {
-  color: var(--color-primary);
+  color: var(--decor-color);
 }
 
 .nav-close {
@@ -312,7 +313,7 @@ using for each and odd*/
   left: 45%;
   width: 0.3rem;
   height: 0.3rem;
-  background-color: var(--color-primary);
+  background-color: var(--decor-color);
   border-radius: 50%;
 }
 
@@ -423,7 +424,7 @@ using for each and odd*/
 }
 
 .rouded {
-  background-color: var(--color-white);
+  background-color: var(--border-bg);
   padding: var(--card-padding);
   border-radius: var(--border-radius);
   box-shadow:0 4px 8px rgba(0,0,0,0.3) ;
@@ -483,7 +484,7 @@ using for each and odd*/
 }
 
 .text a {
-  color: var(--color-primary);
+  color: var(--decor-color);
 }
 
 .experience {
@@ -499,7 +500,7 @@ using for each and odd*/
 }
 
 .timeline {
-  background-color: var(--color-white);
+  background-color: var(--border-bg);
   padding: 1.9rem 0.95rem;
   border-radius: var(--border-radius);
   width: 100%;
@@ -524,7 +525,7 @@ using for each and odd*/
   position: absolute;
   height: 100%;
   left: var(--m-0-5);
-  background-color: var(--color-primary);
+  background-color: var(--decor-color);
   top: 0;
 }
 
@@ -533,8 +534,8 @@ using for each and odd*/
   left: -0.25rem;
   top: 0;
   font-size: 1.5rem;
-  background-color: var(--color-white);
-  color: var(--color-primary);
+  background-color: var(--border-bg);
+  color: var(--decor-color);
 }
 
 .timeline .timeline-date {
@@ -566,7 +567,7 @@ using for each and odd*/
 }
 
 .blog-item .inner {
-  background: var(--color-white);
+  background: var(--border-bg);
   overflow: hidden;
   box-shadow:0 4px 8px rgba(0,0,0,0.3) ;
 
@@ -596,7 +597,7 @@ using for each and odd*/
 }
 
 .blog-item .category {
-  background: var(--color-primary);
+  background: var(--decor-color);
   border-bottom-left-radius: 0.98rem;
   border-bottom-right-radius: 0.98rem;
   color: #fff;
@@ -616,7 +617,7 @@ using for each and odd*/
   line-height: 1.2;
 }
 .blog-item .details .title a:hover {
-  color: var(--color-primary);
+  color: var(--decor-color);
 }
 
 .blog-item .meta {
@@ -687,7 +688,7 @@ using for each and odd*/
 .contact-content {
   position: relative;
   height: 3rem;
-  border-bottom: 2px solid var(--color-gray);
+  border-bottom: 2px solid var(--decor-color);
 }
 
 .contact-content span {
@@ -698,7 +699,7 @@ using for each and odd*/
   height: 2px;
   width: 0;
   transition: 0.5s;
-  background: var(--color-primary);
+  background: var(--decor-color);
 }
 
 .contact-input:focus ~ span {
@@ -739,7 +740,7 @@ using for each and odd*/
   top: -0.75rem;
   left: 0;
   z-index: 10;
-  columns: var(--color-primary);
+  columns: var(--decor-color);
 }
 
 .footer {
@@ -844,7 +845,7 @@ using for each and odd*/
     padding-left: 35px;
     padding-bottom: 20px;
   }
- 
+  
 }
 
 @media screen and (max-width: 320px) {
@@ -855,6 +856,13 @@ using for each and odd*/
   }
 }
 
+.resume-button{
+  background-color: var(--decor-color);
+  border:2px solid white;
+  margin-left: 1rem;
+
+  text-align: center;
+}
 .resume-button:not(:first-child) {
   padding-left: 10px;
 }
@@ -950,7 +958,7 @@ vertical-align: middle;
 }
 
 input:checked + .slider {
-  background:var(--color-primary);
+  background:var(--decor-color);
 }
 
 input:checked + .slider::before {
