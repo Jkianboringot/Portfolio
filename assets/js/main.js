@@ -1,3 +1,24 @@
+
+
+const section_bg_length=document.querySelectorAll('section').length
+const section_bg=document.querySelectorAll('section')
+for(let i =0;i<section_bg_length;i++){
+  console.log(section_bg)
+  section_bg[i].classList.add('section-dark')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close");

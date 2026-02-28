@@ -1,19 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wgt@400;500;600;700&display=swap");
 
 :root {
-  --header-height: 3.5rem;
 
+  --primary-bg:#020024;
+  --secondary-bg:#020019;
+  --decor-color:#FDBF05;
+  --color-white:#ffff;
+  
+
+
+
+  --header-height: 3.5rem;
+/* 
   --primary-color-hue: 352;
   --dark-color-lightness: 17%;
   --light-color-lightness: 92%;
-  --white-color-lightness: 100%;
+  --white-color-lightness: 100%; */
   /* --gray-color-lightness:65% */
 
+
+
+/* 
   --color-white: hsl(252, 30%, var(--white-color-lightness));
   --color-light: hsl(252, 30%, var(--light-color-lightness));
   --color-gray: hsl(252, 15%, 65%);
   --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
-  --color-dark: hsl(252, 30%, var(--dark-color-lightness));
+  --color-dark: hsl(252, 30%, var(--dark-color-lightness)); */
 
   --body-font: "Rubik", sans-serif;
   --h1-font-size: 2.25rem;
@@ -45,7 +57,7 @@
 }
 
 ::-webkit-scrollbar {
-  background: var(--color-primary);
+  background: var(--primary-bg);
   border-radius: 0.5rem;
 }
 
@@ -80,8 +92,10 @@ textarea {
   font-size: var(--normal-font-size);
 }
 body {
-  background-color: var(--color-light);
-  color: var(--color-dark);
+  background-color: var(--primary-bg);
+
+  color: var(--decor-color);
+  /* change this later let it stay like that for now so that its easier to see */
   line-height: 1.7;
   font-weight: var(--font-medium);
 }
@@ -97,7 +111,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--color-dark);
+  color: var(--color-white);
 }
 
 h1,
@@ -118,8 +132,39 @@ h3 {
   font-size: var(--h3-font-size);
 }
 
+/* later i will just use js foreach on this for the background color
+using for each and odd*/
+
+
+.section-about{
+  background-color: var(--secondary-bg);
+
+}
+
+.section-experience{
+  background-color: var(--primary-bg);
+
+}
+
+
+
+.section-project{
+  background-color: var(--secondary-bg);
+
+}
+
+
+.section-contact{
+  background-color: var(--primary-bg);
+
+}
+
+
+
+
 .container {
-  max-width: 968px;
+  
+  max-width: 90%;
   margin: auto;
 }
 
