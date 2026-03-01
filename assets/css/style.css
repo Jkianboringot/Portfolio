@@ -7,25 +7,8 @@
   --color-white: #ffff;
   --border-bg: #1e1e2f;
   --border-bg2: #0f0a3d;
-  /* border-bg could be this #0f0a3d its blends well and does not stand out ask what is better
-  the current kinda pop up more, it makes the gold color better and stand out the unpick
-  one just blends everything */
-  /* --decor-color:#FDBF05; */
 
   --header-height: 3.5rem;
-  /* 
-  --primary-color-hue: 352;
-  --dark-color-lightness: 17%;
-  --light-color-lightness: 92%;
-  --white-color-lightness: 100%; */
-  /* --gray-color-lightness:65% */
-
-  /* 
-  --color-white: hsl(252, 30%, var(--white-color-lightness));
-  --color-light: hsl(252, 30%, var(--light-color-lightness));
-  --color-gray: hsl(252, 15%, 65%);
-  --decor-color: hsl(var(--primary-color-hue), 75%, 60%);
-  --color-dark: hsl(252, 30%, var(--dark-color-lightness)); */
 
   --body-font: "Rubik", sans-serif;
   --h1-font-size: 2.25rem;
@@ -49,6 +32,10 @@
   --border-radius: 1.25rem;
 
   --box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+
+  /* Shared glow shadow matching blog card */
+  --card-glow: 0 25px 50px rgba(130, 117, 245, 0.37),
+    0 0 25px rgba(209, 161, 15, 0.76);
 }
 
 ::-webkit-scrollbar {
@@ -61,9 +48,6 @@
   border-radius: 0.5rem;
 }
 
-/* this is what allow the portfolio to be resposive to any size, phone or pc
-its pretty much a an if statement, saying if screen is smaller than 992px apply the root(default style)
-else stick with old root , one on the top */
 @media screen and (max-width: 1029px) {
   :root {
     --h1-font-size: 1.75rem;
@@ -93,9 +77,7 @@ textarea {
 }
 body {
   background-color: var(--primary-bg);
-
   color: var(--decor-color);
-  /* change this later let it stay like that for now so that its easier to see */
   line-height: 1.7;
   font-weight: var(--font-medium);
 }
@@ -132,9 +114,6 @@ h3 {
   font-size: var(--h3-font-size);
 }
 
-/* later i will just use js foreach on this for the background color
-using for each and odd*/
-
 .section-about {
   background-color: var(--secondary-bg);
 }
@@ -158,7 +137,6 @@ using for each and odd*/
 
 .row {
   display: flex;
-
   flex-wrap: wrap;
 }
 
@@ -171,7 +149,6 @@ using for each and odd*/
   font-size: var(--h1-font-size);
   margin-left: var(--m-0-75);
   margin-bottom: 1rem;
-  /* margin-bottom: var(--m-2-5); */
 }
 
 .padd-15 {
@@ -213,6 +190,8 @@ using for each and odd*/
   animation-iteration-count: 1;
 }
 
+/* ===================== HEADER / NAV ===================== */
+
 .header {
   width: 100%;
   background-color: #02001998;
@@ -223,7 +202,7 @@ using for each and odd*/
 }
 
 .nav {
-  height: calc(var(--header-height)+1.5rem);
+  height: calc(var(--header-height) + 1.5rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -233,7 +212,6 @@ using for each and odd*/
 .nav-logo {
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
-
   letter-spacing: 0.125rem;
   position: relative;
 }
@@ -309,6 +287,8 @@ using for each and odd*/
   box-shadow: 0 1px 4px rgba(165, 125, 125, 0.02);
 }
 
+/* ===================== HOME ===================== */
+
 .container div.home {
   display: flex;
   justify-content: center;
@@ -322,37 +302,45 @@ using for each and odd*/
   min-height: 100vh;
 }
 
-/* //this is for now */
 .intro {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-self: center;
-  height: 70%;
+  height: 100%;
   width: 80%;
   text-align: center;
   flex-wrap: wrap;
-  overflow: hidden;
-  margin-bottom: 5rem;
+  overflow: visible;
+  margin-bottom: 0;
+  padding-top: var(--header-height);
 }
 
 .intro .intro-img {
-  margin-top: 3rem;
+  margin-top: 0;
   flex: 0 0 50%;
   max-width: 50%;
-  height: 35rem;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .intro-img .img-body img {
-  margin-top: 2rem;
+  margin-top: 0;
+  max-height: 90vh;
+  width: auto;
   object-fit: contain;
 }
 
 .intro .intro-headline {
-  margin-top: 9rem;
-  height: 25rem;
+  margin-top: 6rem;
+  height: auto;
   flex: 0 0 50%;
   max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .border-text {
@@ -367,10 +355,8 @@ using for each and odd*/
   font-size: 5.5rem;
 }
 
-/* :not(:first-child) */
 .intro-title span {
   font-weight: 500;
-
   color: #fff;
   display: inline-block;
   padding: 0;
@@ -385,13 +371,13 @@ using for each and odd*/
 }
 .comment {
   padding-left: 1rem;
-  margin-top: -1.5rem;
+  margin-top: 0.5rem;
   font-size: 2rem;
   top: 5px;
   color: #fff;
   display: inline-block;
   text-align: left;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .home .intro .social-icons {
@@ -463,8 +449,7 @@ using for each and odd*/
   animation: ani-mouse 2s linear infinite;
 }
 
-
-
+/* ===================== ABOUT ===================== */
 
 .about-intro {
   flex: 0 0 25%;
@@ -478,10 +463,8 @@ using for each and odd*/
   font-size: 4rem;
 }
 
-/* :not(:first-child) */
 .about-title span {
   font-weight: 500;
-
   color: #fff;
   display: inline-block;
   padding: 0;
@@ -490,7 +473,7 @@ using for each and odd*/
   line-height: 1;
 }
 
-.about-title span::first-letter{
+.about-title span::first-letter {
   color: var(--decor-color);
 }
 .about-title span div {
@@ -498,52 +481,45 @@ using for each and odd*/
   font-weight: 550;
 }
 
-.about-icon{
+.about-icon {
   font-size: 3rem;
 }
 
-.about-icon:hover{
+.about-icon:hover {
   color: var(--decor-color);
 }
 
-
 .about-social ul {
   display: flex;
-  flex-direction: row;     /* social icons go horizontal */
+  flex-direction: row;
   gap: 1rem;
   list-style: none;
   padding: 0;
   margin: 0;
-
 }
-
 
 .resume-button {
   border-radius: 0.5rem;
   margin-left: 1rem;
-   box-shadow: 0 25px 50px rgba(130, 117, 245, 0.247),
-    0 0 25px rgba(209, 161, 15, 0.555);;
   text-align: center;
 }
-
 
 .about-content {
   flex: 0 0 75%;
   max-width: 75%;
 }
-.about-content .about-text
-/* .skills  */ {
+.about-content .about-text {
   color: #fff;
   flex: 0 0 100%;
   max-width: 100%;
 }
 
+/* ─── Glow shadow added to .rouded ─── */
 .rouded {
-  
   background-color: var(--border-bg2);
   padding: var(--card-padding);
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--card-glow);
 }
 
 .about-text p {
@@ -602,6 +578,8 @@ using for each and odd*/
   color: var(--decor-color);
 }
 
+/* ===================== EXPERIENCE / TIMELINE ===================== */
+
 .experience {
   flex: 0 0 100%;
   max-width: 100%;
@@ -612,13 +590,13 @@ using for each and odd*/
   max-width: 100%;
 }
 
+/* ─── Glow shadow added to .timeline ─── */
 .timeline {
   background-color: var(--border-bg);
   padding: 1.9rem 0.95rem;
   border-radius: var(--border-radius);
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
+  box-shadow: var(--card-glow);
   position: relative;
 }
 
@@ -668,107 +646,9 @@ using for each and odd*/
   margin-left: 1rem;
   color: #ccc;
 }
-/* blog */
-/* 
-.blog-item {
-  flex: 0 0 33.33%;
-  width: 33.33%;
-  display: flex;
-}
 
-.blog-title {
-  font-size: var(--h1-font-size);
-  margin-left: var(--m-0-75);
-  margin-top: 1rem;
-}
+/* ===================== CONTACT ===================== */
 
-.blog-item .inner {
-  background: var(--border-bg);
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: 100%;
-
-  border-radius: var(--border-radius);
-  transform: translateY(0);
-  transition: 0.3s;
-  margin-top: 20px;
-}
-
-.blog-item .inner:hover {
-  transform: translateY(-0.98rem);
-}
-
-.blog-item .thumb {
-  position: relative;
-  overflow: hidden;
-}
-
-.blog-item .thumb img {
-  width: 100%;
-
-  height: 180px;
-  transform: scale(1);
-  transition: 0.3s;
-}
-
-.blog-item .thumb:hover img {
-  transform: scale(1.1);
-}
-
-.blog-item .category {
-  background: var(--decor-color);
-  border-bottom-left-radius: 0.98rem;
-  border-bottom-right-radius: 0.98rem;
-  color: #fff;
-  font-size: var(--small-font-size);
-  padding: 0.12rem 0.5rem;
-  position: absolute;
-  left: 1.25rem;
-  top: 0;
-  z-index: 1;
-}
-
-.blog-item .details {
-  padding: 1.25rem;
-}
-
-.blog-item .details .title {
-  line-height: 1.2;
-}
-.blog-item .details .title a:hover {
-  color: var(--decor-color);
-}
-
-.blog-item .meta {
-  font-size: var(--small-font-size);
-  color: var(--color-gray);
-  margin-top: 0.5rem;
-}
-
-.blog-item .meta li {
-  display: inline;
-}
-
-.blog-item .meta li:not(:last-child) {
-  margin-right: 0.6rem;
-}
-
-.blog-item .meta li::after {
-  content: "";
-  background: var(--color-gray);
-  border-radius: 50%;
-  display: inline-block;
-  height: 0.19rem;
-  width: 0.19rem;
-  margin-left: 0.6rem;
-  vertical-align: middle;
-}
-
-.blog-item .meta li:last-child::after {
-  display: none;
-} */
-
-/* contact */
 .contact-box {
   flex: 0 0 40%;
   max-width: 40%;
@@ -784,7 +664,13 @@ using for each and odd*/
   row-gap: 0.5rem;
 }
 
-
+/* ─── Glow shadow added to contact wrapper ─── */
+.contact-box,
+.contact-form {
+  box-shadow: var(--card-glow);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
 
 .contact-description {
   display: inline-flex;
@@ -862,6 +748,8 @@ using for each and odd*/
   columns: var(--decor-color);
 }
 
+/* ===================== FOOTER ===================== */
+
 .footer {
   padding: 60px 0;
 }
@@ -871,108 +759,7 @@ using for each and odd*/
   color: aliceblue;
 }
 
-@media screen and (max-width: 968px) {
-  .about-content,
-  .about-intro {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .about-intro {
-    text-align: center;
-    margin-bottom: var(--m-2-5);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    margin: var(--header-height) 0 0 0;
-  }
-  .container {
-    max-width: 568px;
-  }
-  .nav {
-    height: var(--header-height);
-  }
-  .nav-list {
-    flex-direction: column;
-    row-gap: 1.5rem;
-  }
-  .nav-menu {
-    position: fixed;
-    background: var(--color-white);
-    width: 80%;
-    height: 100%;
-    top: 0;
-    right: -100%;
-    padding: 4rem 0 0 3rem;
-    border-radius: 1rem 0 0 1rem;
-    z-index: 100;
-    transition: 0.3s;
-  }
-  .show-menu {
-    right: 0;
-    background-color: var(--secondary-bg);
-    color: #020019;
-  }
-  .nav-close,
-  .nav-toggle {
-    display: inline-flex;
-  }
-  .contact-data,
-  .contact-form,
-  .education,
-  .experience,
-  .git,
-  .brand,
-  .about-content .about-text {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .fact-item,
-  .blog-item,
-  .project-item {
-    flex-direction: 0 0 50%;
-    max-width: 50%;
-  }
-  .about-content .about-text {
-    margin-bottom: var(--m-1-5);
-  }
-  .contact-data,
-  .blog-item,
-  .education {
-    margin-bottom: var(--m-2-5);
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .blog-item,
-  .git,
-  .brand,
-  .project-item {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .blog-item .inner,
-  .project-item-inner {
-    max-width: 380px;
-    margin: 0 auto;
-  }
-  .timeline {
-    padding: 25px 20px;
-  }
-  .timeline .timeline-item {
-    padding-left: 35px;
-    padding-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .fact-item,
-  .brand {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
+/* ===================== GIT / BRAND ===================== */
 
 .git {
   padding-top: 5%;
@@ -995,20 +782,19 @@ using for each and odd*/
 }
 
 .brand-track {
-  display: flex; /* makes items inline in a row */
-  width: max-content; /* track width only as wide as images */
+  display: flex;
+  width: max-content;
   animation: scroll 30s linear infinite;
 }
 
 .brand-track img,
 .brand-track svg {
-  height: 48px; /* fixed height */
-  width: auto; /* scale proportionally */
+  height: 48px;
+  width: auto;
   margin: 0 10px;
   vertical-align: middle;
   object-fit: contain;
   transition: 0.3s;
-  /* border: 3px solid red; */
 }
 
 .brand-track img:hover,
@@ -1023,14 +809,15 @@ using for each and odd*/
   }
   100% {
     transform: translateX(-50%);
-  } /* for duplicated images */
+  }
 }
 
 .brand .brand-track:hover {
   animation-play-state: paused;
 }
 
-/* toggle night,day button */
+/* ===================== TOGGLE SWITCH ===================== */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -1070,39 +857,34 @@ input:checked + .slider::before {
   transform: translateX(24px);
 }
 
+/* ===================== BLOG ===================== */
 
-/* GRID LAYOUT FOR ALL BLOG ITEMS */
-
-
-/* EACH BLOG ITEM */
 .blog-item {
   width: 100%;
   margin-bottom: 4rem;
 }
 
-/* CARD WRAPPER */
 .blog-card {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #020024;
-  border: 2px solid #1a1272;
   border-radius: 20px;
   padding: 40px;
   overflow: visible;
   border: 3px solid wheat;
   height: 30rem;
   width: 55%;
-
 }
 
-/* LEFT SIDE TEXT */
 .blog-content {
   width: 55%;
   color: #fff;
   z-index: 2;
-
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .blog-content .title a {
@@ -1120,7 +902,6 @@ input:checked + .slider::before {
   color: #fdbf05;
 }
 
-/* META */
 .meta {
   list-style: none;
   padding: 0;
@@ -1128,30 +909,466 @@ input:checked + .slider::before {
   color: #aaa;
 }
 
-/* RIGHT SIDE YELLOW IMAGE BOX */
+/* Live / Repo buttons */
+.blog-buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.blog-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  text-decoration: none;
+  transition: 0.3s;
+  border: 2px solid var(--decor-color);
+  color: #fff;
+  background: transparent;
+}
+
+.blog-btn:hover {
+  background: var(--decor-color);
+  color: #020024;
+}
+
+.blog-btn.live {
+  background: var(--decor-color);
+  color: #020024;
+}
+
+.blog-btn.live:hover {
+  background: transparent;
+  color: var(--decor-color);
+}
+
+/* Preview panel — holds either <img> or <iframe> */
 .blog-preview {
   box-shadow: 0 25px 50px rgba(130, 117, 245, 0.37),
-    0 0 25px rgba(209, 161, 15, 0.76);;
+    0 0 25px rgba(209, 161, 15, 0.76);
   position: absolute;
   right: -35rem;
-  width: 45%;
-  height: 220px;
   background: #fdbf05;
   border-radius: 20px;
   padding: 0;
   display: flex;
   align-items: center;
-   overflow: hidden;
+  overflow: hidden;
   justify-content: center;
-    height: 25rem;
+  height: 25rem;
   width: 100%;
-
 }
 
 .blog-preview img {
-
-  object-fit: fill;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
+  display: block;
+}
+
+/* YouTube iframe fills the preview box exactly */
+.blog-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ====================================================
+   RESPONSIVE — TABLET  (max-width: 968px)
+   ==================================================== */
+@media screen and (max-width: 968px) {
+  /* About */
+  .about-content,
+  .about-intro {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about-intro {
+    text-align: center;
+    margin-bottom: var(--m-2-5);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  /* Resume on top, icon row below — both centered */
+  .about-social {
+    grid-template-columns: 1fr 1fr;  /* keep two columns on tablet too */
+    justify-items: center;
+  }
+  .about-social ul {
+    justify-content: center;
+  }
+  .about-icon {
+    font-size: 1.75rem;
+  }
+  .resume-button {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Intro / Hero — stack on tablet too */
+  .intro {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    overflow: visible;
+    padding-top: 0;
+  }
+  .intro .intro-img {
+    order: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 20rem;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .intro .intro-img .img-body img {
+    margin-top: 0;
+    max-height: 20rem;
+    width: auto;
+    object-fit: contain;
+  }
+  .intro .intro-headline {
+    order: 2;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro-title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .intro-title span {
+    text-align: center;
+  }
+  /* border-text scales to its own content — no forced full width */
+  .border-text {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .comment {
+    text-align: center;
+    padding-left: 0;
+  }
+  .home .intro .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Contact */
+  .contact-box,
+  .contact-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: var(--m-2);
+  }
+
+  /* Services */
+  .services .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Blog card — preview on TOP, content below, both same width & height */
+  .blog-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    overflow: hidden;
+  }
+  .blog-preview {
+    position: static;
+    right: unset;
+    order: 1;
+    width: 100%;
+    height: 18rem;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .blog-preview img,
+  .blog-preview iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    border: none;
+  }
+  .blog-content {
+    order: 2;
+    width: 100%;
+    height: auto;
+    min-height: 10rem;
+    margin-bottom: 0;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  .blog-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+/* ====================================================
+   RESPONSIVE — MOBILE  (max-width: 768px)
+   ==================================================== */
+@media screen and (max-width: 768px) {
+  body {
+    margin: var(--header-height) 0 0 0;
+  }
+  .container {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .nav {
+    height: var(--header-height);
+  }
+  .nav-list {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  .nav-menu {
+    position: fixed;
+    background: var(--color-white);
+    width: 80%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    padding: 4rem 0 0 3rem;
+    border-radius: 1rem 0 0 1rem;
+    z-index: 100;
+    transition: 0.3s;
+  }
+  .show-menu {
+    right: 0;
+    background-color: var(--secondary-bg);
+    color: #020019;
+  }
+  .nav-close,
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  /* Stack all flex children full-width */
+  .contact-data,
+  .contact-form,
+  .contact-box,
+  .education,
+  .experience,
+  .git,
+  .brand,
+  .about-content .about-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .fact-item,
+  .project-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .about-content .about-text {
+    margin-bottom: var(--m-1-5);
+  }
+
+  .contact-data,
+  .education {
+    margin-bottom: var(--m-2-5);
+  }
+
+  /* Hero on mobile — image flush to top, headline block below */
+  .intro {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-bottom: 2rem;
+    overflow: visible;
+    padding-top: 0;
+  }
+  .intro .intro-img {
+    order: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 18rem;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .intro .intro-img .img-body img {
+    margin-top: 0;
+    max-height: 18rem;
+    width: auto;
+    object-fit: contain;
+  }
+  .about-social {
+    grid-template-columns: 1fr;  /* stack on mobile */
+  }
+  .intro .intro-headline {
+    order: 2;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .intro-title span {
+    text-align: center;
+  }
+  .border-text {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .comment {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 0;
+  }
+  .home .intro .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Services full width on mobile */
+  .services .service-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Blog card — preview on TOP, content below, both same width & height */
+  .blog-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    overflow: hidden;
+  }
+  .blog-preview {
+    position: static;
+    right: unset;
+    order: 1;
+    width: 100%;
+    height: 14rem;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .blog-preview img,
+  .blog-preview iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    border: none;
+  }
+  .blog-content {
+    order: 2;
+    width: 100%;
+    height: auto;
+    min-height: 8rem;
+    margin-bottom: 0;
+    padding: 1rem 1.2rem;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  .blog-buttons {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .blog-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+  }
+
+  /* About title smaller */
+  .about-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ====================================================
+   RESPONSIVE — SMALL MOBILE  (max-width: 576px)
+   ==================================================== */
+@media screen and (max-width: 576px) {
+  .git,
+  .brand,
+  .project-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .project-item-inner {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .timeline {
+    padding: 25px 20px;
+  }
+  .timeline .timeline-item {
+    padding-left: 35px;
+    padding-bottom: 20px;
+  }
+  .fact-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .intro-title {
+    font-size: 2rem;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+}
+
+/* ====================================================
+   RESPONSIVE — EXTRA SMALL  (max-width: 320px)
+   ==================================================== */
+@media screen and (max-width: 320px) {
+  .fact-item,
+  .brand {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .intro-title {
+    font-size: 1.6rem;
+  }
 }
