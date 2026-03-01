@@ -1,14 +1,5 @@
 
 
-const section_bg_length=document.querySelectorAll('section').length
-const section_bg=document.querySelectorAll('section')
-for(let i =0;i<section_bg_length;i++){
-  console.log(section_bg)
-  section_bg[i].classList.add('section-dark')
-}
-
-
-
 
 
 
@@ -22,7 +13,6 @@ for(let i =0;i<section_bg_length;i++){
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close");
-
 /*=============== SHOW MENU ===============*/
 
 if (navToggle) {
@@ -30,6 +20,8 @@ if (navToggle) {
     navMenu.classList.add("show-menu");
   });
 }
+
+
 
 /*=============== Light/Dark Mode ===============*/
 
