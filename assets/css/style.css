@@ -596,7 +596,6 @@ h3 {
   padding: 1.9rem 0.95rem;
   border-radius: var(--border-radius);
   width: 100%;
-  box-shadow: var(--card-glow);
   position: relative;
 }
 
@@ -665,7 +664,6 @@ h3 {
 }
 
 /* ─── Glow shadow added to contact wrapper ─── */
-.contact-box,
 .contact-form {
   box-shadow: var(--card-glow);
   border-radius: var(--border-radius);
