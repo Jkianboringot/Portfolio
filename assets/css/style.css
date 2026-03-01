@@ -671,7 +671,7 @@ using for each and odd*/
   color: #ccc;
 }
 /* blog */
-
+/* 
 .blog-item {
   flex: 0 0 33.33%;
   width: 33.33%;
@@ -768,7 +768,7 @@ using for each and odd*/
 
 .blog-item .meta li:last-child::after {
   display: none;
-}
+} */
 
 /* contact */
 .contact-box {
@@ -1070,4 +1070,83 @@ input:checked + .slider {
 
 input:checked + .slider::before {
   transform: translateX(24px);
+}
+
+
+/* GRID LAYOUT FOR ALL BLOG ITEMS */
+
+
+/* EACH BLOG ITEM */
+.blog-item {
+  width: 100%;
+}
+
+/* CARD WRAPPER */
+.blog-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #020024;
+  border: 2px solid #1a1272;
+  border-radius: 20px;
+  padding: 40px;
+  overflow: visible;
+  border: 3px solid wheat;
+  height: 30rem;
+  width: 55%;
+
+}
+
+/* LEFT SIDE TEXT */
+.blog-content {
+  width: 55%;
+  color: #fff;
+  z-index: 2;
+
+}
+
+.blog-content .title a {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fdbf05;
+  padding: 6px 18px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.blog-content .title a:hover {
+  color: #fdbf05;
+}
+
+/* META */
+.meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #aaa;
+}
+
+/* RIGHT SIDE YELLOW IMAGE BOX */
+.blog-preview {
+  position: absolute;
+  right: -35rem;
+  width: 45%;
+  height: 220px;
+  background: #fdbf05;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    height: 25rem;
+  width: 100%;
+}
+
+.blog-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
 }
