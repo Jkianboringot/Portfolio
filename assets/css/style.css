@@ -521,11 +521,9 @@ using for each and odd*/
 .resume-button {
   border-radius: 0.5rem;
   margin-left: 1rem;
-  
+   box-shadow: 0 25px 50px rgba(130, 117, 245, 0.247),
+    0 0 25px rgba(209, 161, 15, 0.555);;
   text-align: center;
-}
-.resume-button:not(:first-child) {
-  padding-left: 10px;
 }
 
 
@@ -1079,6 +1077,7 @@ input:checked + .slider::before {
 /* EACH BLOG ITEM */
 .blog-item {
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 /* CARD WRAPPER */
@@ -1131,21 +1130,27 @@ input:checked + .slider::before {
 
 /* RIGHT SIDE YELLOW IMAGE BOX */
 .blog-preview {
+  box-shadow: 0 25px 50px rgba(130, 117, 245, 0.37),
+    0 0 25px rgba(209, 161, 15, 0.76);;
   position: absolute;
   right: -35rem;
   width: 45%;
   height: 220px;
   background: #fdbf05;
   border-radius: 20px;
-  padding: 15px;
+  padding: 0;
   display: flex;
   align-items: center;
+   overflow: hidden;
   justify-content: center;
     height: 25rem;
   width: 100%;
+
 }
 
 .blog-preview img {
+
+  object-fit: fill;
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px;
