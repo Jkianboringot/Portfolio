@@ -5,7 +5,10 @@
   --secondary-bg: #020019;
   --decor-color: #fdbf05;
   --color-white: #ffff;
-  --border-bg: #0d0566;
+  --border-bg: #1e1e2f;
+  /* border-bg could be this #0f0a3d its blends well and does not stand out ask what is better
+  the current kinda pop up more, it makes the gold color better and stand out the unpick
+  one just blends everything */
   /* --decor-color:#FDBF05; */
 
   --header-height: 3.5rem;
@@ -594,12 +597,12 @@ using for each and odd*/
   top: 0;
   font-size: 1.5rem;
   background-color: var(--border-bg);
-  color: var(--decor-color);
+  color: var(--color-white);
 }
 
 .timeline .timeline-date {
   font-size: var(--small-font-size);
-  color: var(--color-gray);
+  color: #ccc;
 }
 
 .timeline .timeline-date .lni {
@@ -610,6 +613,10 @@ using for each and odd*/
   margin: var(--m-0-5);
 }
 
+.timeline-text li{
+  margin-left: 1rem;
+  color: #ccc;
+}
 /* blog */
 
 .blog-item {
