@@ -6,6 +6,7 @@
   --decor-color: #fdbf05;
   --color-white: #ffff;
   --border-bg: #1e1e2f;
+  --border-bg2: #0f0a3d;
   /* border-bg could be this #0f0a3d its blends well and does not stand out ask what is better
   the current kinda pop up more, it makes the gold color better and stand out the unpick
   one just blends everything */
@@ -180,8 +181,8 @@ using for each and odd*/
 
 .btn {
   padding: 0.75rem 2rem;
-  line-height: 1;
-  border-radius: var(--border-radius);
+  line-height: 1.5;
+  border-radius: 0.9rem;
 }
 
 .btn:focus {
@@ -201,7 +202,7 @@ using for each and odd*/
   color: #fff;
   vertical-align: middle;
   display: inline-block;
-  background-color: var(--decor-color);
+  border: 3px solid var(--decor-color);
   transform: perspective(1px) translateZ(0);
 }
 
@@ -232,7 +233,7 @@ using for each and odd*/
 .nav-logo {
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
-  
+
   letter-spacing: 0.125rem;
   position: relative;
 }
@@ -245,25 +246,18 @@ using for each and odd*/
   background-color: var(--decor-color);
   top: 56%;
   right: -0.25rem;
-
 }
 .nav-menu {
   margin-left: auto;
-
 }
 .nav-list {
   display: flex;
   column-gap: 3rem;
-  
 }
 .nav-link {
   font-weight: var(--font-medium);
   transition: 0.3s;
-
-
 }
-
-
 
 .nav-link:hover {
   color: var(--decor-color);
@@ -275,7 +269,6 @@ using for each and odd*/
   top: 1rem;
   right: 1.25rem;
   cursor: pointer;
-
 }
 
 .nav-btns {
@@ -292,17 +285,14 @@ using for each and odd*/
 .nav-toggle {
   font-size: 1.2rem;
   cursor: pointer;
-  
 }
 
 .nav-close,
 .nav-toggle {
   display: none;
-
 }
 .active-link {
   position: relative;
-
 }
 .active-link::before {
   content: "";
@@ -452,7 +442,7 @@ using for each and odd*/
 }
 
 .mouse {
-  border: 2px solid var(--color-dark);
+  border: 2px solid var(--decor-color);
   display: block;
   height: 1.75rem;
   width: 1.25rem;
@@ -462,7 +452,7 @@ using for each and odd*/
   position: relative;
 }
 .mouse .wheel {
-  background-color: var(--color-dark);
+  background-color: var(--decor-color);
   border-radius: 50%;
   width: 0.25rem;
   height: 0.25rem;
@@ -473,10 +463,71 @@ using for each and odd*/
   animation: ani-mouse 2s linear infinite;
 }
 
-.about-img {
+
+
+
+.about-intro {
   flex: 0 0 25%;
   max-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.about-title {
+  font-size: 4rem;
+}
+
+/* :not(:first-child) */
+.about-title span {
+  font-weight: 500;
+
+  color: #fff;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  line-height: 1;
+}
+
+.about-title span::first-letter{
+  color: var(--decor-color);
+}
+.about-title span div {
+  color: var(--decor-color);
+  font-weight: 550;
+}
+
+.about-icon{
+  font-size: 3rem;
+}
+
+.about-icon:hover{
+  color: var(--decor-color);
+}
+
+
+.about-social ul {
+  display: flex;
+  flex-direction: row;     /* social icons go horizontal */
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+.resume-button {
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  
+  text-align: center;
+}
+.resume-button:not(:first-child) {
+  padding-left: 10px;
+}
+
 
 .about-content {
   flex: 0 0 75%;
@@ -484,12 +535,14 @@ using for each and odd*/
 }
 .about-content .about-text
 /* .skills  */ {
+  color: #fff;
   flex: 0 0 100%;
   max-width: 100%;
 }
 
 .rouded {
-  background-color: var(--border-bg);
+  
+  background-color: var(--border-bg2);
   padding: var(--card-padding);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -613,7 +666,7 @@ using for each and odd*/
   margin: var(--m-0-5);
 }
 
-.timeline-text li{
+.timeline-text li {
   margin-left: 1rem;
   color: #ccc;
 }
@@ -821,11 +874,11 @@ using for each and odd*/
 
 @media screen and (max-width: 968px) {
   .about-content,
-  .about-img {
+  .about-intro {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .about-img {
+  .about-intro {
     text-align: center;
     margin-bottom: var(--m-2-5);
   }
@@ -922,16 +975,6 @@ using for each and odd*/
   }
 }
 
-.resume-button {
-  border-radius: 0.5rem;
-  margin-left: 1rem;
-
-  text-align: center;
-}
-.resume-button:not(:first-child) {
-  padding-left: 10px;
-}
-
 .git {
   padding-top: 5%;
   flex: 0 0 100%;
@@ -950,7 +993,6 @@ using for each and odd*/
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.932);
   border-radius: 0.5rem;
-
 }
 
 .brand-track {
