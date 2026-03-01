@@ -883,6 +883,7 @@ input:checked + .slider::before {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  width: 85%;
 }
 
 .blog-content .title a {
@@ -892,8 +893,14 @@ input:checked + .slider::before {
   padding: 6px 18px;
   border-radius: 6px;
   display: inline-block;
-  margin-bottom: 15px;
   transition: 0.3s;
+}
+
+.blog-content p{
+  font-size: 14px;
+  max-height: 15rem;
+  overflow: auto;
+  width: 100%;
 }
 
 .blog-content .title a:hover {
@@ -1215,7 +1222,6 @@ input:checked + .slider::before {
     margin-bottom: 2rem;
     overflow: visible;
     padding-top: 0;
-    border: 3px solid red;
 
   }
   .intro .intro-img {
@@ -1228,7 +1234,6 @@ input:checked + .slider::before {
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
-    border: 3px solid wheat;
   }
   .intro .intro-img .img-body img {
     margin-top: 0;
@@ -1249,7 +1254,6 @@ input:checked + .slider::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid wheat;
 
   }
   .intro-title {
