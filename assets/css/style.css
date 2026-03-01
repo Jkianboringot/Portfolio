@@ -246,7 +246,6 @@ using for each and odd*/
 }
 .nav-menu {
   margin-left: auto;
-  border: 3px solid var(--decor-color);
 
 }
 .nav-list {
@@ -257,9 +256,11 @@ using for each and odd*/
 .nav-link {
   font-weight: var(--font-medium);
   transition: 0.3s;
-  color: var(--primary-bg);
+
 
 }
+
+
 
 .nav-link:hover {
   color: var(--decor-color);
@@ -271,6 +272,7 @@ using for each and odd*/
   top: 1rem;
   right: 1.25rem;
   cursor: pointer;
+
 }
 
 .nav-btns {
@@ -850,6 +852,8 @@ using for each and odd*/
   }
   .show-menu {
     right: 0;
+    background-color: var(--secondary-bg);
+    color: #020019;
   }
   .nav-close,
   .nav-toggle {
