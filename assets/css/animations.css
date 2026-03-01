@@ -1,0 +1,35 @@
+/* =====================================================
+   ANIMATIONS — add-only, never overrides existing CSS
+   ===================================================== */
+
+/* ── Base hidden state ── */
+.anim-fade-up,
+.anim-fade-left,
+.anim-fade-right,
+.anim-fade-in {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.anim-fade-up    { transform: translateY(48px); }
+.anim-fade-left  { transform: translateX(-48px); }
+.anim-fade-right { transform: translateX(48px); }
+.anim-fade-in    { transform: scale(0.97); }
+
+/* ── Visible state — added by JS via IntersectionObserver ── */
+.anim-fade-up.anim-visible,
+.anim-fade-left.anim-visible,
+.anim-fade-right.anim-visible,
+.anim-fade-in.anim-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Stagger delay helpers (applied by JS via data-delay) ── */
+.anim-delay-1 { transition-delay: 0.1s; }
+.anim-delay-2 { transition-delay: 0.2s; }
+.anim-delay-3 { transition-delay: 0.3s; }
+.anim-delay-4 { transition-delay: 0.4s; }
+.anim-delay-5 { transition-delay: 0.5s; }
+.anim-delay-6 { transition-delay: 0.6s; }
