@@ -1404,6 +1404,7 @@ input:checked + .slider::before {
 @media screen and (max-width: 360px) {
    .about-social ul{
     margin-left: 1.5rem;
+    background-color: red;
   }
 }
 /* ====================================================
