@@ -25,35 +25,35 @@ if (navToggle) {
 
 /*=============== Light/Dark Mode ===============*/
 
-const slider = document.getElementById("slider");
-const slideInput = document.getElementById("slider-input");
-var root = document.querySelector(":root");
+// const slider = document.getElementById("slider");
+// const slideInput = document.getElementById("slider-input");
+// var root = document.querySelector(":root");
 
-let lightColorLightness;
-let whiteColorLightness;
-let darkColorLightness;
+// let lightColorLightness;
+// let whiteColorLightness;
+// let darkColorLightness;
 
-const changeBG = () => {
-  root.style.setProperty("--light-color-lightness", lightColorLightness);
-  root.style.setProperty("--white-color-lightness", whiteColorLightness);
-  root.style.setProperty("--dark-color-lightness", darkColorLightness);
-};
+// const changeBG = () => {
+//   root.style.setProperty("--light-color-lightness", lightColorLightness);
+//   root.style.setProperty("--white-color-lightness", whiteColorLightness);
+//   root.style.setProperty("--dark-color-lightness", darkColorLightness);
+// };
 
-slideInput.addEventListener("change", () => {
-  darkColorLightness = "95%";
-  whiteColorLightness = "20%";
-  lightColorLightness = "15%";
+// slideInput.addEventListener("change", () => {
+//   darkColorLightness = "95%";
+//   whiteColorLightness = "20%";
+//   lightColorLightness = "15%";
 
-  slider.classList.toggle("active", slideInput.checked);
+//   slider.classList.toggle("active", slideInput.checked);
 
-  if (!slideInput.checked) {
-    darkColorLightness = "";
-    whiteColorLightness = "";
-    lightColorLightness = "";
-  }
+//   if (!slideInput.checked) {
+//     darkColorLightness = "";
+//     whiteColorLightness = "";
+//     lightColorLightness = "";
+//   }
 
-  changeBG();
-});
+//   changeBG();
+// });
 
 /*============== MENU HIDDEN ===============*/
 if (navClose) {
@@ -84,13 +84,13 @@ function scrollHeader() {
 window.addEventListener("scroll", scrollHeader);
 
 /*=============== TESTIMONIAL SWIPER ===============*/
-var swiper = new Swiper(".testimonail-wrapper", {
-  loop: "true",
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: "true",
-  },
-});
+// var swiper = new Swiper(".testimonail-wrapper", {
+//   loop: "true",
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: "true",
+//   },
+// });
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll("section[id]");
 
